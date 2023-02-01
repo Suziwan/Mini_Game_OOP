@@ -55,7 +55,7 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
   print "> Press enter to continue" 
   puts(gets.chomp)
 
-  if player1.life_points <= 0 || player2.life_points <= 0
+  if player1.life_points <= 0 && player2.life_points <= 0
     break
   elsif user.life_points <= 0
     break
@@ -65,7 +65,7 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
 end
 
 puts "============= The game is finished =============="
-if player1.life_points <= 0 || player2.life_points <= 0
+if player1.life_points <= 0 && player2.life_points <= 0
   puts "~~~~~~~~~ Congratulations! You won! :D ~~~~~~~~~~"
 elsif user.life_points <= 0
   puts "____________ Sorry... You lost! :'( _____________"
