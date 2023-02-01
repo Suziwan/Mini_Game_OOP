@@ -2,12 +2,10 @@ require 'pry'
 
 class Player
   attr_accessor :name, :life_points
-  @@enemies = []
 
   def initialize(name)
     @name = name
     @life_points = 10
-    @@enemies.push(self.name)
   end
 
   def show_state
@@ -43,7 +41,7 @@ class HumanPlayer < Player
   end
 
   def show_state
-    puts "#{@name} has #{@life_points} life points and a weapon of level #{@weapon_level}"
+    puts "#{@name} has #{@life_points} life points and a weapon level #{@weapon_level}"
   end
 
   def compute_damage
