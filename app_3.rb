@@ -9,16 +9,15 @@ puts "-------------------------------------------------"
 
 puts "-------------- What is your name ? --------------"
 print "> "
-user = HumanPlayer.new(gets.chomp)
-player1 = Player.new("Karine")
-player2 = Player.new("Lisa")
-enemies = [player1, player2] # Try to find a way to do it with @@enemies in the Player class
+user = gets.chomp
+
+my_game = Game.new(user)
 
 while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 0)
-  # call method show_players
-  # call method menu
-  # call method menu_choice
-  # call method enemies_attack
+  my_game.show_players # call method show_players
+  my_game.menu # call method menu
+  my_game.menu_choice # call method menu_choice
+  my_game.enemies_attack # call method enemies_attack
 
   if player1.life_points <= 0 || player2.life_points <= 0
     break
@@ -28,4 +27,4 @@ while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 
   puts "------------------- Next round ------------------\n"
 end
 
-# call method "end"
+my_game.end # call method "end"

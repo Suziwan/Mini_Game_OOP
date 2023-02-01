@@ -1,8 +1,9 @@
-class game
+class Game
   attr_accessor :human_player, :enemies
-  game_on = true
+  @enemies = []
 
-  def initialize()
+  def initialize(name)
+    self.human_player = HumanPlayer.new(name)
   end
 
   def kill_player
